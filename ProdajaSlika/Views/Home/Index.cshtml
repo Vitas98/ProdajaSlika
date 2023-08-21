@@ -1,0 +1,24 @@
+﻿@model ProdajaSlika.ViewModels.HomeViewModel
+
+@{
+    // Postavi kulturu na srpski
+    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("sr-RS");
+    System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+    System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Special offer!</h2>
+<h4>Special prices / limited time offer!</h4>
+<div class="row">
+    @foreach (var pic in Model.SpecialOffers)
+    {
+        <partial name="_PictureCard" model="pic"></partial>
+    }
+</div>
+
+<partial name="_Carousel" />

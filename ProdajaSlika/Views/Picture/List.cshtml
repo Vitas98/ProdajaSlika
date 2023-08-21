@@ -1,0 +1,13 @@
+﻿@model ProdajaSlika.ViewModels.PictureListViewModel
+@{
+    // Postavi kulturu na srpski
+    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("sr-RS");
+    System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+    System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+}
+<div class="row">
+    @foreach (var pic in Model.Pictures)
+    {
+        <partial name="_PictureCard" model="pic"></partial>
+    }
+</div>
