@@ -5,8 +5,8 @@
     System.Threading.Thread.CurrentThread.CurrentCulture = culture;
     System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
 }
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="card">
+<div class="col-sm-4 col-lg-4 col-md-4 mb-4">
+    <div class="card h-100" style="border: 2px solid lightblue;">
         <div class="card-header">
             <img src="@Model.ImageUrl" alt="" class="img-thumbnail">
         </div>
@@ -20,7 +20,7 @@
         <div class="card-footer">
             <p class="button">
                 <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-picId="@Model.Id">
-                    Add to cart
+                    Dodaj u korpu
                 </a>
             </p>
         </div>

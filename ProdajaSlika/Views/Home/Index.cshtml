@@ -8,12 +8,44 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div style="background-color: cornflowerblue;">
+        <h1 class="display-4" style="border: 2px solid lightblue;">Slike na platnu Beograd</h1>
+    </div>
+    <div class="gap" style="line-height: 20px; height: 20px;"></div>
+    <h4>Slike na platnu nude usluge digitalne štampe na više medija. Umetničke slike ili vaše fotografije štampamo na platnu, papiru ili fotopapiru. Možete doneti sliku ili fotografiju koju želite da odštampamo ili možete štampati neku sliku iz <a asp-controller="Picture" asp-action="List">naše ponude</a>.</h4>
 </div>
 
-<h2>Special offer!</h2>
-<h4>Special prices / limited time offer!</h4>
+<partial name="_Carousel" />
+<div class="gap" style="line-height: 20px; height: 20px;"></div>
+
+<h3 style="background-color: cornflowerblue;">Štampanje umetničkih slika, fotografija na platnu</h3>
+<p>Digitalna štampa na platnu vam omogućava da u svoj radni ili životni &nbsp;prostor unesete značajne estetske promene po veoma pristupačnoj ceni. Zidove vaših prostorija mogu krasiti replike poznatih umetničkih dela ili kvalitetne fotografije po vašem izboru.</p>
+<p style="text-align: left;">Digitalna štampa se radi uz pomoć uređaja najnovije generacije koji daju vrhunski kvalitet štampe. Boje koje koristimo su potpuno bezbedne po zdravlje i bez mirisa su.</p>
+<p><strong>U našoj ponudi su, kada je u pitanju digitalna štampa:</strong></p>
+
+<ul>
+    <li>Reprodukcije umetničkih slika</li>
+    <li>Fotografije Beograda i svetskih metropola</li>
+    <li>Posteri za decu</li>
+    <li>Crteži</li>
+    <li>Stare mape sveta i tako dalje</li>
+</ul>
+<p><strong>Naravno, fotografije po vašem izboru takođe mogu biti štampane na platnu i to u dimenzijama koje odgovaraju vašim potrebama.</strong></p>
+
+<div class="gap" style="line-height: 20px; height: 20px;"></div>
+
+<h2 style="background-color: cornflowerblue;">Digitalna štampa na platnu za potpuno drugačiji enterijer</h2>
+
+<p>Ne samo za vaš dom, već i za kafić ili restoran, digitalna štampa na platnu je savršen način da enterijeru date jednu sasvim novu notu i da ga učinite toplijim i lepšim.</p>
+<p>Reporodukcije neke Pikasove slike, ili vrhunska fotografija grada odštampana na platnu sigurno nikoga neće ostaviti ravnodušnim. Posebno impresivne mogu biti fotografije iz više delova, a ljubitelji putovanja i avantura će sigurno voleti stare pomorske mape štampane na platnu.</p>
+<p>Odštampani materijal se zateže na blind ram, koji može biti debljine 2 cm ili 3,5 cm.</p>
+<p>Slikarsko platno, često nazivano i kanvas, vekovima se koristi kao podloga na kojoj su nastajala umetnička dela. Sam termin kanvas potiče iz starog francuskog jezika i označavao je nešto „napravljeno od konoplje“. Jedna od najstarijih umetničkih slika na kanvasu je „Madonna col Bambino e angeli” italijanskog renesansnog slikara Filipa Lipija.</p>
+<p>Cene digitalne štampe na platnu pogledajte <a>ovde</a>.</p>
+
+<div class="gap" style="line-height: 20px; height: 20px;"></div>
+
+<h2 style="background-color: cornflowerblue;">Specijalna ponuda!</h2>
+<h4>Veliki broj proizvoda iz različitih kategorija po sniženim cenama!</h4>
 <div class="row">
     @foreach (var pic in Model.SpecialOffers)
     {
@@ -21,4 +53,4 @@
     }
 </div>
 
-<partial name="_Carousel" />
+

@@ -20,13 +20,15 @@ namespace ProdajaSlika.Controllers
             PictureListViewModel model = new PictureListViewModel()
             {
                 Pictures = _pictureRepository.AllPictures,
-                CurrentCategory = "All cars"
+                CurrentCategory = "Sve slike",
+                Category = new Category { Id = 0, Description= "Ukoliko želite Vašu sliku, pošaljite jednu ili više svojih fotografija putem e-mail adrese.", Name="", Pictures = null}
             };
 
             if (categoryId.HasValue)
             {
                 model.Pictures = _pictureRepository.AllPictures.Where(c => c.CategoryId == categoryId);
                 model.CurrentCategory = _categoryRepository.AllCategories.Where(c => c.Id == categoryId).Select(c => c.Name).FirstOrDefault();
+                model.Category = _categoryRepository.AllCategories.Where(c => c.Id == categoryId).FirstOrDefault();
             }
 
             return View(model);

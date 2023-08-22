@@ -6,5 +6,6 @@ namespace ProdajaSlika.ViewModels
     {
         public IEnumerable<Picture> Pictures { get; set; }
         public string CurrentCategory { get; set; }
+        public Category Category { get; set; }
     }
 }
