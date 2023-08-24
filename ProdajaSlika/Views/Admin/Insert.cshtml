@@ -1,0 +1,63 @@
+﻿@model Picture
+
+<h2>Dodavanje nove slike</h2>
+
+<form asp-controller="Admin" asp-action="Insert" method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Naziv</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label">Opis</label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label">Cena</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageUrl" class="control-label">Url Slike</label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsSpecialOffer" class="control-label">Specijalna ponuda</label>
+        <div>
+            <input type="checkbox" asp-for="IsSpecialOffer" />
+            <span asp-validation-for="IsSpecialOffer" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="CanvasTypeId" class="control-label">CanvasTypeId</label>
+        <input asp-for="CanvasTypeId" class="form-control" />
+        <span asp-validation-for="CanvasTypeId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FrameTypeId" class="control-label">FrameTypeId</label>
+        <input asp-for="FrameTypeId" class="form-control" />
+        <span asp-validation-for="FrameTypeId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PictureHeight" class="control-label">PictureHeight</label>
+        <input asp-for="PictureHeight" class="form-control" />
+        <span asp-validation-for="PictureHeight" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PictureWidth" class="control-label">PictureWidth</label>
+        <input asp-for="PictureWidth" class="form-control" />
+        <span asp-validation-for="PictureWidth" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CategoryId" class="control-label">CategoryId</label>
+        <input asp-for="CategoryId" class="form-control" />
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Dodaj sliku</button>
+    </div>
+</form>

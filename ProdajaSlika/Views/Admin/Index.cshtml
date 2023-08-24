@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Picture>
+
+<h2>Admin Panel - Slike</h2>
+
+<a asp-action="Insert" class="btn btn-primary">Dodaj novu sliku</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Cena</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var picture in Model)
+        {
+            <tr>
+                <td>@picture.Name</td>
+                <td>@picture.Price</td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@picture.Id">Izmeni</a> |
+                    <a asp-action="Delete" asp-route-id="@picture.Id">Obriši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
