@@ -4,7 +4,7 @@ using ProdajaSlika.Models;
 
 namespace ProdajaSlika.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="Admin")]
     public class AdminController : Controller
     {
         private readonly IPictureRepository _pictureRepository;

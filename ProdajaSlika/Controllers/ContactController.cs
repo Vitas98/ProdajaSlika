@@ -8,5 +8,12 @@ namespace ProdajaSlika.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult PosaljiPoruku(string ime, string prezime, string email, string poruka)
+        {
+            ViewBag.Poruka = "Vaša poruka je uspešno poslata!";
+            return View("Index");
+        }
     }
 }

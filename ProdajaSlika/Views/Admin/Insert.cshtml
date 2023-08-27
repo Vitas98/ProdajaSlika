@@ -1,6 +1,9 @@
 ﻿@model Picture
 
-<h2>Dodavanje nove slike</h2>
+
+<div style="background-color: cornflowerblue;">
+    <h1 style="border: 2px solid lightblue;">Dodavanje nove slike</h1>
+</div>
 
 <form asp-controller="Admin" asp-action="Insert" method="post">
     <div class="form-group">
@@ -57,6 +60,7 @@
         <input asp-for="CategoryId" class="form-control" />
         <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
+    <div class="gap" style="line-height: 20px; height: 20px;"></div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Dodaj sliku</button>
     </div>

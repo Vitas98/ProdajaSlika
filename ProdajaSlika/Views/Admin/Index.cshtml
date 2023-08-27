@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<Picture>
 
-<h2>Admin Panel - Slike</h2>
+<div style="background-color: cornflowerblue;">
+    <h1 style="border: 2px solid lightblue;">Admin Panel - Slike</h1>
+</div>
 
-<a asp-action="Insert" class="btn btn-primary">Dodaj novu sliku</a>
 
-<table class="table">
+
+<table class="table" style="border: 2px solid lightblue;">
     <thead>
         <tr>
             <th>Naziv</th>
@@ -26,3 +28,5 @@
         }
     </tbody>
 </table>
+<div></div>
+<a asp-action="Insert" class="btn btn-primary">Dodaj novu sliku</a>

@@ -17,7 +17,8 @@ namespace ProdajaSlika
             }
             );
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            builder.Services.AddDefaultIdentity<IdentityUser>().AddDefaultTokenProviders()
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
 
             builder.Services.AddScoped<IPictureRepository, PictureRepository>();

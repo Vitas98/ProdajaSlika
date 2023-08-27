@@ -24,3 +24,20 @@
         </div>
     </div>
 </div>
+
+<h2 style="border: 2px solid lightblue;">Kontaktirajte Nas</h2>
+<form action="/Kontakt/PosaljiPoruku" method="post">
+    <label for="ime">Ime:</label>
+    <input type="text" id="ime" name="ime" required><br><br>
+
+    <label for="prezime">Prezime:</label>
+    <input type="text" id="prezime" name="prezime" required><br><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="poruka">Poruka:</label><br>
+    <textarea id="poruka" name="poruka" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Pošalji">
+</form>

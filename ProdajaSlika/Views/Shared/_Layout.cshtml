@@ -34,6 +34,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">Kontakt</a>
                         </li>
                         @await Component.InvokeAsync("ShoppingCartSummary")
+                        <partial name="_LoginPartial" />
                     </ul>
                 </div>
             </div>
@@ -53,7 +54,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            Slike na platnu &copy; 2023 - <a asp-area="" asp-controller="Contact" asp-action="Index">Kontakt</a> - <a asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+            Slike na platnu &copy; 2023 - <a asp-area="" asp-controller="Contact" asp-action="Index">Kontakt</a> - <a asp-area="" asp-controller="Admin" asp-action="Index">Admin</a> - <a asp-area="" asp-controller="AppRoles" asp-action="Index">Ovlašćenja</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

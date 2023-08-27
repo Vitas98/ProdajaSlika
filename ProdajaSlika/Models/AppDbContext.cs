@@ -19,6 +19,7 @@ namespace ProdajaSlika.Models
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
