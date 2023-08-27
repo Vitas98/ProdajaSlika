@@ -1,12 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @model IEnumerable<IdentityRole>
 
-<h1>Ovlašćenja</h1>
-<p>
-    <a asp-action="Create">Napravi ovlašćenje</a>
-</p>
-
-<table class="table">
+<div style="background-color: cornflowerblue;">
+    <h1 style="border: 2px solid lightblue;">Ovlašćenja</h1>
+</div>
+<table class="table" style="border: 2px solid lightblue;">
     <thead>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Id)</th>
@@ -26,3 +24,6 @@
         }
     </tbody>
 </table>
+<p>
+    <a asp-action="Create">Napravi novo ovlašćenje</a>
+</p>

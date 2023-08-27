@@ -4,7 +4,9 @@
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-            <h2>Napravi ovlašćenje</h2>
+            <div style="background-color: cornflowerblue;">
+                <h1 style="border: 2px solid lightblue;">Napravi ovlašćenje</h1>
+            </div>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-floating">
@@ -12,6 +14,7 @@
                 <label asp-for="Name"></label>
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+            <div class="gap" style="line-height: 20px; height: 20px;"></div>
             <button type="submit" class="btn btn-primary">Sačuvaj</button>
         </form>
     </div>

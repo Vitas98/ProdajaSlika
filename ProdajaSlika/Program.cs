@@ -24,6 +24,7 @@ namespace ProdajaSlika
             builder.Services.AddScoped<IPictureRepository, PictureRepository>();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 
             builder.Services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
             builder.Services.AddHttpContextAccessor();
