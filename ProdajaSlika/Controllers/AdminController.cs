@@ -77,5 +77,12 @@ namespace ProdajaSlika.Controllers
 
             return View(novaSlika);
         }
+
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            ViewBag.ErrorMessage = "Nemate dozvolu za pristup ovoj stranici.";
+            return View();
+        }
     }
 }
