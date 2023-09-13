@@ -42,13 +42,6 @@
                 <label asp-for="Input.ConfirmPassword"></label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-
-            <div class="form-floating">
-                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select" aria-required="true">
-                    <option disabled selected>Odaberi ovlašćenje</option>
-                </select>
-                <span asp-validation-for="Input.Role" class="text-danger"></span>
-            </div>
             <div class="gap" style="line-height: 20px; height: 20px;"></div>
 
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Registruj se</button>

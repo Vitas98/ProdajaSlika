@@ -197,6 +197,39 @@ namespace ProdajaSlika.Models
                 PictureWidth = 55,
                 CategoryId = 5
             });
+
+            var hasher = new PasswordHasher<IdentityUser>();
+            modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
+            {
+                Id = "dd96ec2c-ce12-4bb7-83fd-97781bbece06",
+                UserName = "jovan@gmail.com",
+                NormalizedUserName = "JOVAN@GMAIL.COM",
+                Email = "jovan@gmail.com",
+                NormalizedEmail = "JOVAN@GMAIL.COM",
+                EmailConfirmed = true,
+                PasswordHash = hasher.HashPassword(null, "Sexsofsky!@34"), // AQAAAAEAACcQAAAAEOTnB4AFJhT7b2Lo0YGHQllMQ7pJNdcUyxleiFHEG/Fch1odmttf1/u12aMbujPJZA==
+                SecurityStamp = "RNG3476RYQCCZPE7SUB4HKFLCN5HRQPA",
+                ConcurrencyStamp = "7333a0e7-c48d-4cba-b7df-b3734bf7ccfb",
+                PhoneNumber = "066548165",
+                PhoneNumberConfirmed = true,
+                TwoFactorEnabled = false,
+                LockoutEnabled = true,
+                AccessFailedCount = 0,
+            });
+
+            modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Id = "c969f652-243e-4cf5-9122-6f8e9dd83bcb",
+                Name = "Admin",
+                NormalizedName = "ADMIN",
+                ConcurrencyStamp = "7c739dc7-8d36-4a90-874d-c6ed8d684529",
+            });
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                UserId = "dd96ec2c-ce12-4bb7-83fd-97781bbece06",
+                RoleId = "c969f652-243e-4cf5-9122-6f8e9dd83bcb",
+            });
         }
     }
 }
